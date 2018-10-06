@@ -1,14 +1,28 @@
 <p id="notice"><%= notice %></p>
+<div class="show row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading pin_image">
+       <%= @post.title %>
+      </div>
+      <div class="panel-body">
+         <%= @post.body %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+      </div>
+      <div class="panel-footer">  
+        <% if current_user.id == @post.user_id %>
+          <%= link_to 'Edit', edit_post_path(@post) %> |
+        <% end %>
+          <%= link_to 'Back', posts_path %> 
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div id="likes">
+  <%= render partial: "likes" %>
+</div>
+
+ <%= @post.likes.count %>
+
+      </div>
+    </div>
+  </div>
+</div>
