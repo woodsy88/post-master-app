@@ -16,13 +16,16 @@
           <%= link_to 'Back', posts_path %> 
 
 
-<div id="likes">
-  <%= render partial: "likes" %>
+<div id="post_<%= @post.id %>_likes">
+  <%= render partial: "likes", locals: { post: @post } %>
 </div>
 
- <%= @post.likes.count %>
 
-      </div>
+
+  <% @post.likes.each do |like|%>
+    <%= image_tag like.user.avatar_url, width: 20 %>
+  <% end %>    
+  </div>
     </div>
   </div>
 </div>
