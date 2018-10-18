@@ -71,3 +71,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 
 gem "awesome_print", require:"ap" 
+
+gem 'html-pipeline', '~> 2.8', '>= 2.8.4'
+gem 'github-markdown', '~> 0.6.7'
+gem 'gemoji', '~> 2.1.0'

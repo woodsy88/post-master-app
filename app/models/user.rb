@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :likes
   
+  has_many :events
   # checks if user has liked a post
   def likes?(post)
     # returns true or false
