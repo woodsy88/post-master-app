@@ -20,5 +20,6 @@ class User < ApplicationRecord
     "http://www.gravatar.com/avatar/#{hash}"
   end
 
+  has_many :notifications, foreign_key: :recipient_id
 
 end
