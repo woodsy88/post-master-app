@@ -1,5 +1,9 @@
 class Post < ApplicationRecord
    has_many :likes
+   belongs_to :user
+   belongs_to :forum_thread
+   
+
 
   #  MOCK EMAIL USER IF THEY ARE MENTIONED IN A POST
   #  after_create :notified_users

@@ -51,6 +51,7 @@ group :development do
   gem 'meta_request'
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'annotate', '~> 2.7', '>= 2.7.4'
 end
 
 group :test do
@@ -79,3 +80,4 @@ gem 'gemoji', '~> 2.1.0'
 gem 'name_of_person'
 
 gem 'jquery-atwho-rails', '~> 1.5', '>= 1.5.4'
+

@@ -1,15 +1,15 @@
 # == Schema Information
 #
-# Table name: likes
+# Table name: forum_threads
 #
 #  id         :bigint(8)        not null, primary key
+#  subject    :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  post_id    :integer
 #  user_id    :integer
 #
 
-class Like < ApplicationRecord
+class ForumThread < ApplicationRecord
   belongs_to :user
-  belongs_to :post
+  has_many :posts
 end
