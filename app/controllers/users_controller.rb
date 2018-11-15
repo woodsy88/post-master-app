@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:follow]
+  before_action :set_user, only: [:follow, :show]
   def index
     @users = User.all
+  end
+
+  def show
+    @user_events = @user.events
   end
 
   def follow

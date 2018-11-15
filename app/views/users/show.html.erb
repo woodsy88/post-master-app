@@ -1,0 +1,7 @@
+<%= @user.name.full %>
+
+
+<% @user_events.each do |event| %>
+      <%= event.action %>
+      <%= event.eventable %>
+<% end %>

@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :likes
+
+  has_person_name
   
   has_many :events
   # checks if user has liked a post

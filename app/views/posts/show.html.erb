@@ -6,7 +6,11 @@
        <%= @post.title %>
       </div>
       <div class="panel-body">
-         <%= markdownify @post.body %>
+         <%= linked_users @post.body %>
+
+	  <strong>Mentions:</strong>
+  <%= @post.mentioned_users.to_a %>
+</p>
 
       </div>
       <div class="panel-footer">  
@@ -22,9 +26,10 @@
 
 
 
-  <% @post.likes.each do |like|%>
+  <% @post.likes.each do |like| %>
     <%= image_tag like.user.avatar_url, width: 20 %>
-  <% end %>    
+  <% end %>  
+
   </div>
     </div>
   </div>

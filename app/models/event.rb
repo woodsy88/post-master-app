@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
 
   belongs_to :user
-  belongs_to :eventables, polymorphic: true
+  belongs_to :eventable, polymorphic: true
 end

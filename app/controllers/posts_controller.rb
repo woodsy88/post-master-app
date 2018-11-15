@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :bookmark]
   before_action :authenticate_user!, except: [:index, :show]
 
 
@@ -63,6 +63,13 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def bookmark
+    current_user.events.create(action: "bookmarked", eventable: @post)
+    redirect_to users_path
+  end                                                                              
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

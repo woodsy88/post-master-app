@@ -75,3 +75,7 @@ gem "awesome_print", require:"ap"
 gem 'html-pipeline', '~> 2.8', '>= 2.8.4'
 gem 'github-markdown', '~> 0.6.7'
 gem 'gemoji', '~> 2.1.0'
+
+gem 'name_of_person'
+
+gem 'jquery-atwho-rails', '~> 1.5', '>= 1.5.4'

@@ -1,0 +1,10 @@
+<div>
+<div class="panel panel-default">
+<div class="panel-body">
+      <%= link_to event.user.name.full, user_path(event.user) %>
+      <%= event.action %>
+      <%= event.eventable.name.full %>
+</div>
+<div class="panel-footer"><%= link_to 'Show', event %></div>
+</div>
+</div>
